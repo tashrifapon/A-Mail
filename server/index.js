@@ -80,6 +80,15 @@ app.use('/api/cache', cacheRouter);
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
 
+// Serve Vite build in production
+import { existsSync } from 'fs';
+import { join } from 'path';
+const distPath = join(__dirname, '..', 'dist');
+if (existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (_req, res) => res.sendFile(join(distPath, 'index.html')));
+}
+
 app.listen(PORT, () => {
   console.log(`\n  A-mail server running at http://localhost:${PORT}\n`);
 });
