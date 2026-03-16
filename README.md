@@ -18,7 +18,7 @@ No more costly mistakes because you lost sight of an important email in a sea of
 - **Custom buckets** — describe them in plain English, the AI then verifies it understands
 - **Self-improving** — move an email to correct the AI; after an amount of corrections of your choice (default 30), on run, it reclassifies automatically
 - **Starred emails** — float to top in their bucket, cross-bucket starred view
-- **View, Compose & Reply** — no need to leave the app, defeats the purpose via poor functionality
+- **View, Compose & + AI-Assisted Reply** — no need to leave the app at all, defeats the purpose via poor functionality
 - **Select all + bulk actions** — mark read/unread, move in bulk
 - **Pluggable LLM** — Anthropic, OpenAI, Groq (plug-in taken care of, just name your model and paste your key!)
 
