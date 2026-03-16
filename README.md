@@ -25,7 +25,7 @@ No more costly mistakes because you lost sight of an important email in a sea of
 ---
 
 ## Links
-- [**YouTube Demo**](youtube.com)
+- [**YouTube Demo**](https://youtube.com/)
 - [**Live Site**](https://a-mail.onrender.com/) - No need for the rest below, enjoy! Exception: Google API is in testing mode, so contact me at tashrifapon2001@gmail.com if you are not a test user.
 
 ## Prerequisites
@@ -140,12 +140,6 @@ Click the **⚙ Settings** icon in the top bar and switch the provider:
 | **OpenAI** | API key from [platform.openai.com](https://platform.openai.com) |
 | **Groq** | API key from [console.groq.com](https://console.groq.com) — free tier available |
 
-Custom Ollama models (e.g. `phi4-mini`, `gemma3:4b`, `mistral:7b`):
-```bash
-ollama pull phi4-mini
-# Then set model to "phi4-mini" in Settings
-```
-
 ---
 
 ## Project structure
@@ -170,9 +164,9 @@ a-mail/
 │   │   └── gmailApi.js       Fetch threads, send, reply, read/unread
 │   ├── classifier/
 │   │   ├── heuristics.js     Free, instant: header + sender patterns
-│   │   ├── llmClassifier.js  Adapters: Ollama, Anthropic, OpenAI, Groq
+│   │   ├── llmClassifier.js  Adapters: Anthropic, OpenAI, Groq
 │   │   ├── pipeline.js       Phase 1 → Phase 2 orchestration
-│   │   └── feedbackLoop.js   60s debounce, correction writes, threshold
+│   │   └── feedbackLoop.js   Correction writes, threshold
 │   ├── store/
 │   │   ├── appReducer.js     All app state via useReducer
 │   │   └── AppContext.jsx    Context + derived selectors
