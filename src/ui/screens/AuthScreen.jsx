@@ -42,7 +42,6 @@ export default function AuthScreen({ onSignIn, config }) {
             </h1>
             <p className={styles.sub}>
               AI-powered triage that learns how you think.
-              Runs entirely on your machine.
             </p>
           </>
         )}
@@ -64,7 +63,7 @@ export default function AuthScreen({ onSignIn, config }) {
         )}
 
         <div className={styles.footer}>
-          <span>Open source · Local LLMs · Your data stays yours</span>
+          <span>Open source · V1</span>
         </div>
       </div>
     </div>
