@@ -1,0 +1,26 @@
+{
+  "name": "a-mail",
+  "version": "1.0.0",
+  "description": "AI-powered email triage client using Gmail and local LLMs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"node server/index.js\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "client": "vite"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "vite": "^5.4.2"
+  }
+}

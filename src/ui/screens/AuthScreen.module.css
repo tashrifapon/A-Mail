@@ -1,0 +1,140 @@
+.screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+/* Subtle dot-grid background */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(91,110,245,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(91,110,245,0.04) 0%, transparent 40%),
+    radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 52px 56px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: var(--shadow-lg), 0 0 80px rgba(91,110,245,0.05);
+  animation: fadeIn 0.5s ease both;
+}
+
+.logoRow {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: var(--space-2);
+}
+
+.logoMark {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  font-style: italic;
+}
+
+.logoText {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.headline em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.signInBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: #fff;
+  color: #1f1f1f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid #dadce0;
+  cursor: pointer;
+  transition: box-shadow var(--transition-fast), background var(--transition-fast);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.signInBtn:hover:not(:disabled) {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  background: #f8f8f8;
+}
+
+.signInBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 320px;
+}
+
+.hint code {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: var(--bg-elevated);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+}
+
+.footer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+}

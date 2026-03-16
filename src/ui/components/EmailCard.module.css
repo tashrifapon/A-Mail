@@ -1,0 +1,202 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: 12px var(--space-5);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-base);
+  cursor: default;
+  transition: background var(--transition-fast);
+  position: relative;
+  min-height: 72px;
+}
+
+.card:hover {
+  background: var(--bg-hover);
+}
+
+.card.selected {
+  background: var(--accent-dim);
+}
+
+.card.unread { background: var(--bg-surface); }
+.card.unread:hover { background: var(--bg-hover); }
+
+/* Blue left border for unread */
+.unreadDot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 0 2px 2px 0;
+}
+
+.checkWrap {
+  display: flex;
+  align-items: center;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+.checkbox {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.star {
+  font-size: 1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  padding-top: 1px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.star:hover { color: var(--star); transform: scale(1.1); }
+.starActive { color: var(--star) !important; }
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.row1 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.sender {
+  font-size: 0.88rem;
+  font-weight: 550;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.card:not(.unread) .sender {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.date {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.row2 {}
+
+.subject {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card:not(.unread) .subject {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.row3 {}
+
+.snippet {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Actions — visible on hover */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.card:hover .actions { opacity: 1; }
+
+.actionBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.actionBtn:hover {
+  background: var(--bg-active);
+  color: var(--text-primary);
+}
+
+/* Move dropdown */
+.moveWrap {
+  position: relative;
+}
+
+.moveDropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  min-width: 160px;
+  z-index: 100;
+  overflow: hidden;
+  animation: fadeIn 0.12s ease both;
+}
+
+.dropdownLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: var(--space-2) var(--space-3) var(--space-1);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px var(--space-3);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdownItem:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}

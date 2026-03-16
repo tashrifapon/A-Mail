@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Local environment — contains real credentials, never commit
+.env
+
+# SQLite database — contains personal email data, never commit
+data/
+
+# Vite build output
+dist/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime
+.node_repl_history
